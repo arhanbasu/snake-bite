@@ -8,7 +8,7 @@ const Game = () => {
 
   const startGame = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/api/start');
+      const response = await axios.get('https://snake-bite-2.onrender.com/api/start');
       setGameState(response.data);
       setIsStarted(true);
     } catch (error) {
@@ -20,7 +20,7 @@ const Game = () => {
     if (isStarted) {
       const intervalId = setInterval(async () => {
         try {
-          const response = await axios.get('http://localhost:5000/api/state');
+          const response = await axios.get('https://snake-bite-2.onrender.com/api/state');
           setGameState(response.data);
         } catch (error) {
           console.error("Error updating game state:", error);
@@ -33,7 +33,7 @@ const Game = () => {
 
   const handleDirectionChange = async (direction) => {
     try {
-      await axios.post('http://localhost:5000/api/change-direction', { direction });
+      await axios.post('https://snake-bite-2.onrender.com/api/change-direction', { direction });
     } catch (error) {
       console.error("Error changing direction:", error);
     }
