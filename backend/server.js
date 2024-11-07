@@ -26,7 +26,7 @@ app.post('/api/change-direction', (req, res) => {
 });
 
 // Start server
-app.listen(https://snake-bite-2.onrender.com, () => {
+app.listen('https://snake-bite-2.onrender.com', () => {
   console.log('Backend server running on http://localhost:5000');
 });
 
