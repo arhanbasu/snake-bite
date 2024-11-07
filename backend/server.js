@@ -3,6 +3,8 @@ const cors = require('cors');
 const game = require('./snakeLogic');
 const app = express();
 
+const port = process.env.PORT || 5000;
+
 app.use(cors());
 app.use(express.json());
 
@@ -26,7 +28,7 @@ app.post('/api/change-direction', (req, res) => {
 });
 
 // Start server
-app.listen('https://snake-bite-2.onrender.com', () => {
+app.listen(port, () => {
   console.log('Backend server running on http://localhost:5000');
 });
 
